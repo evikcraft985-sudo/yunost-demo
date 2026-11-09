@@ -14,31 +14,33 @@
   </script>
   <script type="module" src="./assets/js/main.js"></script>
 </head>
-<body data-theme="music">
+<body data-theme="stage">
   <a class="skip-link" href="#main">К содержанию</a>
+
   <header class="site-header">
     <a class="brand" href="./index.html" aria-label="Юность, главная">
-      <span class="brand-mark">Ю</span>
-      <span>Юность</span>
+      <span class="brand-mark" aria-hidden="true">Ю</span>
+      <span class="brand-name">Юность</span>
     </a>
     <nav class="main-nav" aria-label="Основная навигация">
-      <a href="#courses">Направления</a>
+      <a href="#programme">Программа</a>
       <a href="#stage">Сцена студии</a>
-      <a href="#reviews">Отзывы</a>
+      <a href="#trial">Пробный урок</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <a class="header-phone" href="tel:+79281523857">+7 928 152-38-57</a>
   </header>
 
   <main id="main" class="page-main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Музыкальная студия · Ростов-на-Дону</p>
+
+    <section class="hero playbill" aria-labelledby="hero-title">
+      <div class="hero-programme">
+        <p class="programme-line"><span>Ростов-на-Дону</span><span aria-hidden="true">✦</span><span>музыкальная студия</span><span aria-hidden="true">✦</span><span>Будённовский, 40Б</span></p>
         <h1 class="display" id="hero-title">Найдите<br><em>свой инструмент.</em></h1>
-        <p class="hero-lede">Фортепиано, вокал, гитара и ударные для детей и взрослых. Выберите направление на сцене студии — и запишитесь на бесплатный пробный урок.</p>
+        <p class="hero-lede">Вечерняя программа студии: фортепиано, вокал, гитара и ударные для детей и взрослых. Выберите направление на сцене — и приходите на бесплатный пробный урок.</p>
         <div class="button-row">
           <a class="button" href="https://t.me/studiomusdon" target="_blank" rel="noopener">Записаться на пробный урок <span aria-hidden="true">↗</span></a>
-          <button class="button button-secondary" type="button" data-scroll-to="#stage">Выбрать направление <span aria-hidden="true">↓</span></button>
+          <button class="button button-ghost" type="button" data-scroll-to="#stage">Выйти на сцену <span aria-hidden="true">↓</span></button>
         </div>
         <ul class="hero-facts">
           <li>Пробный урок — бесплатно</li>
@@ -47,31 +49,31 @@
         </ul>
       </div>
 
-      <div class="scene-shell" id="stage" data-scene="music" data-scene-state="loading">
+      <div class="scene-shell stage-box" id="stage" data-scene="music" data-scene-state="loading">
         <div class="scene-viewport" data-scene-viewport>
-          <div class="scene-poster" style="--poster-bg:#ece7dd" role="img" aria-label="Инструменты студии на сцене, статичная версия">
+          <div class="scene-poster" style="--poster-bg:#14121f" role="img" aria-label="Инструменты студии на сцене под прожектором, статичная версия">
             <svg viewBox="0 0 800 600" aria-hidden="true">
-              <ellipse cx="400" cy="520" rx="300" ry="48" fill="#ddd5c6"/>
-              <ellipse cx="400" cy="470" rx="230" ry="34" fill="#f6f1e6"/>
-              <g fill="#1f3a5f">
+              <rect width="800" height="600" fill="#14121f"/>
+              <path d="M420 40 L330 520 L510 520 Z" fill="#d8a548" opacity="0.22"/>
+              <ellipse cx="400" cy="520" rx="300" ry="48" fill="#1d1a2b"/>
+              <ellipse cx="400" cy="470" rx="230" ry="34" fill="#242034"/>
+              <g fill="#2a2438">
                 <rect x="120" y="300" width="90" height="150" rx="10"/>
                 <rect x="140" y="270" width="50" height="40" rx="6"/>
               </g>
-              <g fill="#d8cfc0">
-                <rect x="132" y="352" width="66" height="20" rx="3" fill="#f2f0e6"/>
-                <g fill="#1c2a3a"><rect x="140" y="352" width="6" height="13"/><rect x="152" y="352" width="6" height="13"/><rect x="170" y="352" width="6" height="13"/><rect x="182" y="352" width="6" height="13"/></g>
+              <g fill="#c9c3b2">
+                <rect x="132" y="352" width="66" height="20" rx="3" fill="#f2ead8"/>
+                <g fill="#14121f"><rect x="140" y="352" width="6" height="13"/><rect x="152" y="352" width="6" height="13"/><rect x="170" y="352" width="6" height="13"/><rect x="182" y="352" width="6" height="13"/></g>
               </g>
-              <g stroke="#1f3a5f" stroke-width="6" fill="none">
-                <path d="M480 420 a70 90 0 1 1 100 0 l-12 -60 a40 60 0 1 0 -76 0 z" fill="#1f3a5f" stroke="none"/>
-              </g>
-              <rect x="572" y="180" width="16" height="120" rx="6" fill="#b08d3f"/>
-              <g fill="#1f3a5f">
+              <path d="M480 420 a70 90 0 1 1 100 0 l-12 -60 a40 60 0 1 0 -76 0 z" fill="#2a2438"/>
+              <rect x="572" y="180" width="16" height="120" rx="6" fill="#d8a548"/>
+              <g fill="#2a2438">
                 <ellipse cx="310" cy="330" rx="52" ry="14"/>
                 <rect x="258" y="330" width="104" height="26" rx="4"/>
               </g>
-              <rect x="296" y="210" width="28" height="120" rx="4" fill="#b08d3f"/>
-              <circle cx="310" cy="200" r="16" fill="#1f3a5f"/>
-              <text x="400" y="570" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-style="italic" fill="#8a7f6e">Выберите своё направление</text>
+              <rect x="296" y="210" width="28" height="120" rx="4" fill="#d8a548"/>
+              <circle cx="310" cy="200" r="16" fill="#d8a548" opacity="0.85"/>
+              <circle cx="420" cy="38" r="10" fill="#f4c56a"/>
             </svg>
           </div>
           <span class="scene-loading">Загружаем сцену студии…</span>
@@ -96,87 +98,80 @@
       </div>
     </section>
 
-    <div class="trust-bar" aria-label="Сведения о студии">
-      <span><strong>5,0 на Яндекс Картах</strong> · 231 оценка</span>
-      <span>Будённовский проспект, 40Б · Ростов-на-Дону</span>
+    <div class="marquee-stat" aria-label="Сведения о студии">
+      <span><strong>5,0</strong> на Яндекс Картах · 231 оценка</span>
+      <span aria-hidden="true">✦</span>
+      <span>Будённовский проспект, 40Б</span>
+      <span aria-hidden="true">✦</span>
       <span>Открыто до 22:00</span>
+      <span aria-hidden="true">✦</span>
+      <span>Пробный урок — 0 ₽</span>
     </div>
 
-    <section class="content-section" id="courses" aria-labelledby="courses-title">
-      <div class="section-heading">
-        <p class="eyebrow">Направления</p>
-        <div>
-          <h2 id="courses-title">Каждому — свой путь в музыку.<br>От первой ноты до сцены.</h2>
-          <p>Состав направлений в демо-версии — пример структуры сайта. При запуске заменим на реальные курсы, преподавателей и цены студии.</p>
-        </div>
+    <section class="treatment-section" id="programme" aria-labelledby="programme-title">
+      <div class="treatment-head">
+        <p class="kicker">Программа вечера</p>
+        <h2 id="programme-title">Каждому — <em>свой путь в музыку.</em></h2>
+        <p class="treatment-note">Состав направлений в демо-версии — пример структуры сайта. При запуске заменим на реальные курсы, преподавателей и цены студии.</p>
       </div>
-      <div class="category-grid">
-        <article class="category-item"><span>01</span><h3>Фортепиано</h3><p>Классическая и современная программа, постановка рук и чтение нот.</p></article>
-        <article class="category-item"><span>02</span><h3>Вокал</h3><p>Дыхание, слух, работа с репертуаром и уверенность на сцене.</p></article>
-        <article class="category-item"><span>03</span><h3>Гитара</h3><p>Акустика и электрогитара: аккорды, бой, перебор и любимые песни.</p></article>
-        <article class="category-item"><span>04</span><h3>Ударные</h3><p>Ритм, координация и первые биты с самых первых занятий.</p></article>
-        <article class="category-item"><span>05</span><h3>Музыка для детей</h3><p>Игровой формат, развитие слуха и подготовка к музыкальной школе.</p></article>
-        <article class="category-item"><span>06</span><h3>Взрослые с нуля</h3><p>Программа без обязательной классической школы — в вечернее время.</p></article>
+      <div class="programme-grid">
+        <article class="programme-card"><span class="card-no" aria-hidden="true">01</span><h3>Фортепиано</h3><p>Классическая и современная программа, постановка рук и чтение нот.</p></article>
+        <article class="programme-card"><span class="card-no" aria-hidden="true">02</span><h3>Вокал</h3><p>Дыхание, слух, работа с репертуаром и уверенность на сцене.</p></article>
+        <article class="programme-card"><span class="card-no" aria-hidden="true">03</span><h3>Гитара</h3><p>Акустика и электрогитара: аккорды, бой, перебор и любимые песни.</p></article>
+        <article class="programme-card"><span class="card-no" aria-hidden="true">04</span><h3>Ударные</h3><p>Ритм, координация и первые биты с самых первых занятий.</p></article>
+        <article class="programme-card"><span class="card-no" aria-hidden="true">05</span><h3>Музыка для детей</h3><p>Игровой формат, развитие слуха и подготовка к музыкальной школе.</p></article>
+        <article class="programme-card"><span class="card-no" aria-hidden="true">06</span><h3>Взрослые с нуля</h3><p>Программа без обязательной классической школы — в вечернее время.</p></article>
       </div>
     </section>
 
-    <section class="content-section" id="concerts" aria-labelledby="concerts-title">
-      <div class="section-heading">
-        <p class="eyebrow">Живая студия · демо-контент</p>
-        <div><h2 id="concerts-title">Ученики выходят на сцену.</h2></div>
-      </div>
-      <div class="review-grid">
-        <figure class="review-card">
-          <blockquote>«Осенний концерт студии: ученики всех направлений играют и поют в небольшом зале. Для многих — первое выступление в жизни»</blockquote>
-          <figcaption><span>Пример события</span><a href="https://t.me/yunostrostov" target="_blank" rel="noopener">Анонсы в Telegram-канале ↗</a></figcaption>
-        </figure>
-        <figure class="review-card">
-          <blockquote>«Открытый урок для родителей: дети показывают, чему научились за месяц, а преподаватели объясняют, как устроены занятия»</blockquote>
-          <figcaption><span>Пример события</span><a href="https://t.me/studiomusdon" target="_blank" rel="noopener">Записаться на визит ↗</a></figcaption>
-        </figure>
+    <section class="interlude-section" id="interlude" aria-labelledby="interlude-title">
+      <div class="interlude">
+        <blockquote class="interlude-quote">
+          «Осенний концерт студии: ученики всех направлений играют и поют в небольшом зале. Для многих — первое выступление в жизни»
+          <cite>Пример события · анонсы — <a href="https://t.me/yunostrostov" target="_blank" rel="noopener">в Telegram-канале ↗</a></cite>
+        </blockquote>
       </div>
     </section>
 
-    <section class="content-section" id="process" aria-labelledby="process-title">
+    <section class="treatment-section" id="trial" aria-labelledby="trial-title">
       <div class="split-feature">
-        <figure>
-          <img class="real-photo" src="./assets/images/studio.svg" alt="Стилизованная иллюстрация сцены музыкальной студии" width="800" height="1000" loading="lazy">
-          <figcaption class="photo-caption">Иллюстрация для демо-версии · при запуске заменим на фотографии студии</figcaption>
+        <figure class="feature-art">
+          <img src="./assets/images/studio.svg" alt="Иллюстрация сцены музыкальной студии под прожектором" width="800" height="1000" loading="lazy">
         </figure>
-        <div class="feature-copy">
-          <p class="eyebrow">Пробный урок</p>
-          <h2 id="process-title">Сначала попробовать.<br>Потом выбрать.</h2>
+        <div class="feature-article">
+          <p class="kicker">Пробный урок</p>
+          <h2 id="trial-title">Сначала попробовать.<br><em>Потом выбрать.</em></h2>
           <p>На пробном занятии преподаватель покажет инструмент, послушает вас или ребёнка и предложит программу. Запись — через Telegram студии.</p>
-          <ol class="process-list">
-            <li><div><strong>Напишите в Telegram</strong><p>Укажите направление, возраст и удобное время занятий.</p></div></li>
-            <li><div><strong>Приходите на пробный урок</strong><p>Знакомство с преподавателем, инструментом и первой мелодией.</p></div></li>
-            <li><div><strong>Получите план занятий</strong><p>Расписание, программа и цели — от первых нот до выступлений.</p></div></li>
+          <ol class="numbered-steps">
+            <li><span class="step-no" aria-hidden="true">1</span><div><strong>Напишите в Telegram</strong><p>Укажите направление, возраст и удобное время занятий.</p></div></li>
+            <li><span class="step-no" aria-hidden="true">2</span><div><strong>Приходите на пробный урок</strong><p>Знакомство с преподавателем, инструментом и первой мелодией.</p></div></li>
+            <li><span class="step-no" aria-hidden="true">3</span><div><strong>Получите план занятий</strong><p>Расписание, программа и цели — от первых нот до выступлений.</p></div></li>
           </ol>
         </div>
       </div>
     </section>
 
-    <section class="content-section" id="reviews" aria-labelledby="reviews-title">
-      <div class="section-heading">
-        <p class="eyebrow">Отзывы · демо-текст</p>
-        <div><h2 id="reviews-title">Что говорят ученики.</h2></div>
+    <section class="treatment-section" id="reviews" aria-labelledby="reviews-title">
+      <div class="treatment-head">
+        <p class="kicker">Из зрительного зала · демо</p>
+        <h2 id="reviews-title">Что говорят <em>ученики.</em></h2>
       </div>
-      <div class="review-grid">
+      <div class="review-duo">
         <figure class="review-card">
-          <blockquote>«Пример отзыва: пришла взрослой без опыта — через месяц играю первую пьесу, преподаватель объясняет спокойно и по делу»</blockquote>
-          <figcaption><span>Демо-отзыв</span><a href="https://yandex.ru/maps/org/yunost/164043131973/" target="_blank" rel="noopener">Карточка на Яндекс Картах ↗</a></figcaption>
+          <blockquote>Пришла взрослой без опыта — через месяц играю первую пьесу, преподаватель объясняет спокойно и по делу»</blockquote>
+          <figcaption><a href="https://yandex.ru/maps/org/yunost/164043131973/" target="_blank" rel="noopener">Карточка на Яндекс Картах ↗</a></figcaption>
         </figure>
         <figure class="review-card">
-          <blockquote>«Пример отзыва: сын ждёт занятие всю неделю, нравится, что можно выбрать вечернее время после школы»</blockquote>
-          <figcaption><span>Демо-отзыв</span><a href="https://yandex.ru/maps/org/yunost/164043131973/reviews/" target="_blank" rel="noopener">Отзывы на Яндекс Картах ↗</a></figcaption>
+          <blockquote>Сын ждёт занятие всю неделю, нравится, что можно выбрать вечернее время после школы»</blockquote>
+          <figcaption><a href="https://yandex.ru/maps/org/yunost/164043131973/reviews/" target="_blank" rel="noopener">Отзывы на Яндекс Картах ↗</a></figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="content-section" aria-labelledby="faq-title">
-      <div class="section-heading">
-        <p class="eyebrow">Перед записью</p>
-        <div><h2 id="faq-title">Частые вопросы.</h2></div>
+    <section class="treatment-section" aria-labelledby="faq-title">
+      <div class="treatment-head">
+        <p class="kicker">Перед записью</p>
+        <h2 id="faq-title">Частые <em>вопросы.</em></h2>
       </div>
       <div class="faq-list">
         <details><summary>Нужен ли свой инструмент?</summary><p>Для первых занятий — нет: знакомство с инструментом проходит в студии. Для домашних занятий преподаватель подскажет подходящий вариант.</p></details>
@@ -185,14 +180,14 @@
       </div>
     </section>
 
-    <section class="contact-panel" id="contacts" aria-labelledby="contacts-title">
-      <div>
-        <p class="eyebrow">Запись</p>
-        <h2 id="contacts-title">Первая нота —<br>уже на этой неделе.</h2>
+    <section class="encore" id="contacts" aria-labelledby="encore-title">
+      <div class="encore-copy">
+        <p class="kicker">Финал программы</p>
+        <h2 id="encore-title">Первая нота —<br><em>уже на этой неделе.</em></h2>
         <p>Напишите направление и удобное время. Ответим, подберём преподавателя и предложим время пробного урока.</p>
         <div class="button-row">
           <a class="button" href="https://t.me/studiomusdon" target="_blank" rel="noopener">Написать в Telegram <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="tel:+79281523857">Позвонить <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="tel:+79281523857">Позвонить <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <dl class="contact-methods">

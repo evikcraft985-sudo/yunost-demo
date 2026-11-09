@@ -18,12 +18,12 @@ const COURSES = {
 
 const easeOut = (x) => 1 - Math.pow(1 - x, 3);
 
-const wood = () => new THREE.MeshStandardMaterial({ color: '#23293b', roughness: 0.45, metalness: 0.12 });
-const dark = () => new THREE.MeshStandardMaterial({ color: '#1c2a3a', roughness: 0.5 });
+const wood = () => new THREE.MeshStandardMaterial({ color: '#3a3860', roughness: 0.4, metalness: 0.12 });
+const dark = () => new THREE.MeshStandardMaterial({ color: '#2b3350', roughness: 0.45 });
 const cream = () => new THREE.MeshStandardMaterial({ color: '#f2efe6', roughness: 0.4 });
-const metal = () => new THREE.MeshStandardMaterial({ color: '#b08d3f', roughness: 0.25, metalness: 0.9 });
-const accent = () => new THREE.MeshStandardMaterial({ color: '#a14b2c', roughness: 0.5 });
-const skin = () => new THREE.MeshStandardMaterial({ color: '#5a4632', roughness: 0.75 });
+const metal = () => new THREE.MeshStandardMaterial({ color: '#d8a548', roughness: 0.25, metalness: 0.9 });
+const accent = () => new THREE.MeshStandardMaterial({ color: '#c25f33', roughness: 0.45 });
+const skin = () => new THREE.MeshStandardMaterial({ color: '#8d6a44', roughness: 0.7 });
 
 function buildPiano() {
   const g = new THREE.Group();
@@ -99,17 +99,17 @@ function buildGuitar() {
   const hole = new THREE.Mesh(new THREE.CircleGeometry(0.085, 24), new THREE.MeshStandardMaterial({ color: '#241a12', roughness: 0.9 }));
   hole.position.set(0, 0.06, 0.115);
   bodyGroup.add(hole);
-  bodyGroup.position.y = 0.52;
+  bodyGroup.position.y = 0.35;
   g.add(bodyGroup);
   const neck = makeBox(0.075, 0.72, 0.05, skin(), 0.01);
-  neck.position.set(0, 1.02, 0.008);
+  neck.position.set(0, 0.88, 0.008);
   g.add(neck);
   const head = makeBox(0.11, 0.16, 0.05, dark(), 0.008);
-  head.position.set(0, 1.42, 0.008);
+  head.position.set(0, 1.28, 0.008);
   g.add(head);
   for (const x of [-0.02, -0.007, 0.007, 0.02]) {
-    const string = makeCylinder(0.0022, 0.0022, 1.02, metal(), 6);
-    string.position.set(x, 0.76, 0.06);
+    const string = makeCylinder(0.0022, 0.0022, 0.94, metal(), 6);
+    string.position.set(x, 0.62, 0.06);
     g.add(string);
   }
   const bridge = makeBox(0.14, 0.035, 0.02, dark(), 0.005);
@@ -121,24 +121,28 @@ function buildGuitar() {
 
 function buildDrums() {
   const g = new THREE.Group();
-  const bass = new THREE.Mesh(new THREE.CylinderGeometry(0.34, 0.34, 0.24, 32, 1), accent());
-  bass.rotation.x = Math.PI / 2 - 0.12;
-  bass.position.set(-0.14, 0.44, 0.05);
+  const bass = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.26, 32, 1), accent());
+  bass.rotation.x = Math.PI / 2 - 0.05;
+  bass.position.set(-0.14, 0.33, 0.05);
   bass.castShadow = true;
   bass.receiveShadow = true;
   g.add(bass);
-  const bassHead = new THREE.Mesh(new THREE.CircleGeometry(0.32, 32), cream());
-  bassHead.position.set(-0.14, 0.39, 0.24);
+  const bassHead = new THREE.Mesh(new THREE.CircleGeometry(0.30, 32), cream());
+  bassHead.position.set(-0.14, 0.325, 0.187);
   g.add(bassHead);
-  for (const x of [-0.36, 0.08]) {
-    const leg = makeCylinder(0.008, 0.008, 0.24, metal(), 8);
+  for (const x of [-0.4, 0.12]) {
+    const leg = makeCylinder(0.008, 0.008, 0.2, metal(), 8);
     leg.rotation.z = Math.PI / 2.6;
-    leg.position.set(x, 0.16, 0.05);
+    leg.position.set(x, 0.08, 0.05);
     g.add(leg);
   }
   const snare = makeCylinder(0.17, 0.17, 0.12, metal(), 24);
-  snare.position.set(0.28, 0.46, 0.3);
+  snare.position.set(0.28, 0.42, 0.3);
+  snare.rotation.x = 0.12;
   g.add(snare);
+  const snareStand = makeCylinder(0.006, 0.006, 0.36, metal(), 8);
+  snareStand.position.set(0.28, 0.18, 0.3);
+  g.add(snareStand);
   const tom1 = makeCylinder(0.11, 0.11, 0.16, metal(), 20);
   tom1.position.set(0.02, 0.72, 0.24);
   g.add(tom1);
@@ -159,7 +163,7 @@ function buildDrums() {
 
 export async function init(viewport) {
   const stage = createStage(viewport, {
-    background: '#ece7dd',
+    background: '#14121f',
     cameraPosition: [4.3, 2.7, 5.7],
     target: [0, 0.95, 0],
     fov: 36,
@@ -168,12 +172,12 @@ export async function init(viewport) {
     maxDistance: 12,
   });
   const { scene } = stage;
-  scene.fog = new THREE.Fog('#ece7dd', 14, 28);
+  scene.fog = new THREE.Fog('#14121f', 14, 28);
   stage.renderer.toneMappingExposure = 1.0;
 
-  const floorMaterial = new THREE.MeshStandardMaterial({ color: '#e2dbcd', roughness: 0.9 });
-  const platformMaterial = new THREE.MeshStandardMaterial({ color: '#f6f1e6', roughness: 0.55 });
-  const rimMaterial = new THREE.MeshStandardMaterial({ color: '#b08d3f', roughness: 0.3, metalness: 0.85 });
+  const floorMaterial = new THREE.MeshStandardMaterial({ color: '#1a172a', roughness: 0.9 });
+  const platformMaterial = new THREE.MeshStandardMaterial({ color: '#2a2438', roughness: 0.55 });
+  const rimMaterial = new THREE.MeshStandardMaterial({ color: '#d8a548', roughness: 0.3, metalness: 0.85 });
 
   const root = new THREE.Group();
   scene.add(root);
@@ -232,10 +236,10 @@ export async function init(viewport) {
   spotLight.target = spotTarget;
 
   addShadow(stage, { intensity: 1.6, position: [3, 7, 5] });
-  const fill = new THREE.DirectionalLight('#dfe8f6', 0.7);
+  const fill = new THREE.DirectionalLight('#b8c0dd', 0.9);
   fill.position.set(-4, 4, 3);
   scene.add(fill);
-  const warmAmbient = new THREE.PointLight('#f4c56a', 8, 10, 2);
+  const warmAmbient = new THREE.PointLight('#f4c56a', 14, 11, 2);
   warmAmbient.position.set(0.5, 3, 2);
   scene.add(warmAmbient);
 

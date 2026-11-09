@@ -1,48 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
-  <rect width="800" height="1000" fill="#ece7dd"/>
-  <ellipse cx="400" cy="810" rx="330" ry="70" fill="#ddd5c6"/>
-  <ellipse cx="400" cy="770" rx="260" ry="52" fill="#f6f1e6"/>
-  <ellipse cx="400" cy="770" rx="260" ry="52" fill="none" stroke="#b08d3f" stroke-width="5"/>
-  <!-- upright piano -->
-  <g>
-    <rect x="120" y="440" width="180" height="280" rx="14" fill="#1f3a5f"/>
-    <rect x="150" y="400" width="120" height="52" rx="8" fill="#16283a"/>
-    <rect x="138" y="560" width="144" height="46" rx="6" fill="#f2f0e6"/>
-    <g fill="#1c2a3a">
-      <rect x="150" y="560" width="14" height="28"/><rect x="172" y="560" width="14" height="28"/>
-      <rect x="206" y="560" width="14" height="28"/><rect x="228" y="560" width="14" height="28"/>
+  <rect width="800" height="1000" fill="#1d1a2b"/>
+  <!-- plaster stage wall -->
+  <g opacity="0.55">
+    <g stroke="#2a2438" stroke-width="3">
+      <path d="M0 160 h800 M0 320 h800 M0 480 h800 M0 640 h800"/>
+      <path d="M100 0 v780 M250 0 v780 M400 0 v780 M550 0 v780 M700 0 v780"/>
     </g>
-    <rect x="120" y="640" width="10" height="80" fill="#16283a"/>
-    <rect x="290" y="640" width="10" height="80" fill="#16283a"/>
+  </g>
+  <rect width="800" height="1000" fill="#1d1a2b" opacity="0.55"/>
+  <!-- stage floor -->
+  <rect x="0" y="720" width="800" height="280" fill="#242034"/>
+  <g stroke="#2f2a42" stroke-width="2">
+    <path d="M0 760 h800 M0 800 h800 M0 840 h800 M0 880 h800 M0 920 h800 M0 960 h800"/>
+  </g>
+  <!-- spotlight shaft -->
+  <path d="M400 40 L300 760 L500 760 Z" fill="#d8a548" opacity="0.16"/>
+  <path d="M400 40 L360 760 L440 760 Z" fill="#f2ead8" opacity="0.1"/>
+  <circle cx="400" cy="42" r="11" fill="#f4c56a"/>
+  <!-- platform -->
+  <ellipse cx="400" cy="800" rx="300" ry="52" fill="#2a2438"/>
+  <ellipse cx="400" cy="782" rx="300" ry="48" fill="#332c49"/>
+  <ellipse cx="400" cy="782" rx="300" ry="48" fill="none" stroke="#d8a548" stroke-width="3" opacity="0.8"/>
+  <!-- grand-ish upright piano -->
+  <g>
+    <rect x="150" y="480" width="150" height="240" rx="10" fill="#2f2a42"/>
+    <rect x="166" y="446" width="118" height="44" rx="6" fill="#262136"/>
+    <rect x="172" y="602" width="106" height="34" rx="3" fill="#f2ead8"/>
+    <g fill="#14121f">
+      <rect x="182" y="602" width="9" height="18"/><rect x="200" y="602" width="9" height="18"/>
+      <rect x="226" y="602" width="9" height="18"/><rect x="244" y="602" width="9" height="18"/>
+    </g>
   </g>
   <!-- microphone -->
   <g>
-    <ellipse cx="420" cy="708" rx="26" ry="8" fill="#16283a"/>
-    <rect x="417" y="470" width="7" height="240" fill="#b08d3f"/>
-    <circle cx="420" cy="452" r="22" fill="#b08d3f"/>
-    <circle cx="420" cy="452" r="15" fill="#8f9aa8"/>
+    <rect x="418" y="500" width="7" height="240" fill="#d8a548"/>
+    <circle cx="421" cy="486" r="20" fill="#d8a548"/>
+    <circle cx="421" cy="486" r="13" fill="#8f8aa0"/>
   </g>
   <!-- guitar -->
-  <g transform="rotate(8 620 560)">
-    <ellipse cx="620" cy="570" rx="60" ry="72" fill="#a14b2c"/>
-    <ellipse cx="620" cy="492" rx="50" ry="52" fill="#a14b2c"/>
-    <circle cx="620" cy="500" r="17" fill="#241a12"/>
-    <rect x="610" y="330" width="20" height="130" rx="6" fill="#5a4632"/>
-    <rect x="606" y="296" width="28" height="40" rx="6" fill="#1c2a3a"/>
-    <g stroke="#b08d3f" stroke-width="2"><path d="M613 330v290M620 330v290M627 330v290"/></g>
+  <g transform="rotate(9 600 640)">
+    <ellipse cx="600" cy="640" rx="52" ry="62" fill="#3b2a1e"/>
+    <ellipse cx="600" cy="570" rx="43" ry="46" fill="#3b2a1e"/>
+    <circle cx="600" cy="578" r="15" fill="#14121f"/>
+    <rect x="592" y="440" width="17" height="100" rx="5" fill="#d8a548"/>
+    <rect x="587" y="406" width="27" height="36" rx="5" fill="#262136"/>
+    <g stroke="#d8a548" stroke-width="1.8" opacity="0.9"><path d="M594 440v228M600 440v228M606 440v228"/></g>
   </g>
-  <!-- drums -->
+  <!-- drum -->
   <g>
-    <circle cx="300" cy="700" r="58" fill="#a14b2c"/>
-    <circle cx="300" cy="700" r="58" fill="none" stroke="#b08d3f" stroke-width="4"/>
-    <circle cx="300" cy="700" r="50" fill="#f2f0e6"/>
-    <ellipse cx="352" cy="600" rx="40" ry="12" fill="#b08d3f"/>
-    <rect x="350" y="600" width="5" height="120" fill="#b08d3f"/>
-    <ellipse cx="200" cy="560" rx="34" ry="10" fill="#c7a44c"/>
-    <rect x="197" y="562" width="4" height="140" fill="#b08d3f"/>
+    <circle cx="255" cy="700" r="48" fill="#3b2a1e"/>
+    <circle cx="255" cy="700" r="48" fill="none" stroke="#d8a548" stroke-width="3.5"/>
+    <circle cx="255" cy="700" r="41" fill="#f2ead8" opacity="0.9"/>
+    <ellipse cx="302" cy="610" rx="34" ry="10" fill="#d8a548"/>
+    <rect x="300" y="610" width="4" height="112" fill="#d8a548"/>
   </g>
-  <!-- spotlight shaft -->
-  <path d="M420 60 L330 760 L510 760 Z" fill="#ffe9c0" opacity="0.4"/>
-  <circle cx="420" cy="52" r="10" fill="#f4c56a"/>
-  <text x="400" y="900" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-style="italic" fill="#1c2a3a">Сцена музыкальной студии «Юность»</text>
+  <!-- brass notes -->
+  <g fill="#d8a548" opacity="0.85">
+    <circle cx="120" cy="240" r="10"/><rect x="128" y="176" width="5" height="66"/>
+    <circle cx="680" cy="330" r="9"/><rect x="687" y="272" width="4.6" height="60"/>
+    <circle cx="640" cy="120" r="7"/><rect x="646" y="74" width="4" height="48"/>
+  </g>
+  <text x="400" y="958" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-style="italic" fill="#a49db4">Вечерняя программа студии «Юность»</text>
 </svg>
