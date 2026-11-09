@@ -924,3 +924,25 @@ input[type='range'] {
     transition-duration: 0.01ms !important;
   }
 }
+
+body[data-theme='music'] {
+  color-scheme: light;
+  --font-sans: 'Mulish', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --bg: #f4f1ea;
+  --surface: #faf7f0;
+  --surface-strong: #ffffff;
+  --ink: #1c2a3a;
+  --muted: #5c6b7a;
+  --line: rgba(28, 42, 58, 0.16);
+  --accent: #1f3a5f;
+  --accent-ink: #f4f1ea;
+  --accent-soft: #d9e2ec;
+  --banner-muted: #c9d3de;
+  --gold: #b08d3f;
+  --shadow: 0 26px 80px rgba(28, 42, 58, 0.14);
+}
+body[data-theme='music'] .icon-button[aria-pressed='true'] {
+  color: var(--accent-ink);
+}

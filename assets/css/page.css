@@ -169,7 +169,7 @@ body[data-theme='light'] {
 .scene-shell {
   border: 1px solid #3d5142;
   border-radius: 0;
-  background: #0c1411;
+  background: #16283a;
   box-shadow: none;
 }
 
@@ -179,7 +179,7 @@ body[data-theme='light'] {
 
 .scene-toolbar {
   border-top: 0;
-  background: #0c1411;
+  background: #16283a;
 }
 
 .chip[aria-pressed='true'] {
@@ -190,7 +190,7 @@ body[data-theme='light'] {
 
 .icon-button[aria-pressed='true'] {
   border-color: var(--accent);
-  background: #25351f;
+  background: #223245;
   color: var(--accent);
 }
 
@@ -548,4 +548,28 @@ body[data-theme='light'] {
   .review-card { min-height: 0; }
   .review-card figcaption { flex-direction: column; gap: 6px; }
   .contact-method { grid-template-columns: 88px 1fr; gap: 10px; font-size: 10px; }
+}
+
+/* Music theme overrides */
+.site-header {
+  background: rgba(250, 247, 240, 0.94);
+  border-bottom: 1px solid var(--line);
+}
+.scene-shell,
+.scene-viewport {
+  border-color: #ccd4de;
+}
+.scene-toolbar {
+  border-top-color: #ccd4de;
+}
+
+.scene-toolbar .chip,
+.scene-toolbar .icon-button {
+  color: #dfe6ee;
+  border-color: rgba(223, 230, 238, 0.32);
+}
+.scene-toolbar .chip[aria-pressed='true'] {
+  background: #f4f1ea;
+  border-color: #f4f1ea;
+  color: #16283a;
 }
